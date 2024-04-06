@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <nav class="navbar">
+
+        <h3 style="color: white; padding-left: 10px;">PlacesToVisit</h3>
+        <div class="navlinks" id="navlinks">
+            <button class="bar" style="background-color: transparent; border: none;" onclick="hideMenu()"><img src="Images/hamburger-menu.svg" alt=""></button>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="" id="technicalWorkLink">About us</a></li>
+            </ul>
+        </div>
+
+        <button class="bar" style="background-color: transparent; border: none;" onclick="showMenu()"><img src="Images/hamburger-menu.svg" alt=""></button>
+
+    </nav>
+
+
+
+    
+
+
+    <section class="main">
+
+        
+        <div class="textbox">
+            <h1>Enter Country Name:</h1>
+            <input id="countryInput" class="searchbar" type="search-bar" placeholder="Country">
+            <button class="btn" type="button" onclick="openCountryPage()" >Search</button>
+        </div>
+        
+
+    </section>
+
+    <section class="about">
+
+        <h1>About Webpage</h1>
+
+        <div class="Explanation">
+            <p>This website is made for people who love traveling but sometimes feel unsure about where to go in a particular country. When you tell us which country you're interested in, our site does the work for you. It shows you the top three places most people visit there.
+
+                It's like having a travel expert at your fingertips! We use cool tech stuff to pick out the best spots that capture the heart of that country. We look at what people love most—places full of history, culture, and amazing views.
+                
+                Think of this website as your travel guide, helping you discover the best places without any hassle. It's all about making your trip special by showing you the most popular and awesome spots travelers can't get enough of.
+                
+                <b>Ready to explore?</b> Let our website be your map to the most incredible destinations around the world!
+            </p>
+        </div>
+
+
+
+    </section>
+
+    
+    <section class="suggestions">
+        <h1>Wanderer's Corner: Share Your Travel Tales & Suggestions!</h1>
+
+        <div class="callaction">
+
+        <p>Welcome to Wanderer's Corner! Your experiences
+            matter. Share your travel stories, tips, and 
+            recommendations here. Whether it's a hidden gem
+             you discovered or advice for fellow travelers,
+              this space is for you. Let's build a community
+               of passionate explorers helping each other make
+                every adventure extraordinary!</p>
+            </div>
+
+        <div class="form-container">
+            <form class="form">
+                <input type="text" placeholder="Enter Name">
+                <input type="email" placeholder="Enter Email">
+                <textarea rows="5" placeholder="Your Comment" ></textarea>
+                <button id="shareButton" type="submit" class="share-btn">Share</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <script>
+        function openCountryPage() {
+    var countryName = document.getElementById("countryInput").value;
+    if (countryName.toLowerCase() === "azerbaijan") {
+        window.location.href = "azerbaijan.html";
+    } else if(countryName.toLowerCase() === "turkmenistan") {
+        window.location.href = "turkmenistan.html";
+    } else if(countryName.toLowerCase() == "turkey"){
+        window.location.href = "turkey.html";
+    }else if(countryName.toLowerCase() == "greece"){
+        window.location.href = "greece.html";
+    }else if(countryName.toLowerCase() == ""){
+        alert(" Write a country name please (:");
+    }
+   
+    else {
+       alert("Our database does not contain any information regarding this country. (:");
+    }
+}
+
+    document.getElementById("shareButton").onclick = function(){
+        alert("This function does not work for a short periof of time ):");
+        
+    }
+
+    var menu = document.getElementById("navlinks");
+
+    function showMenu(){
+        menu.style.right = "0";
+    }
+
+    function hideMenu(){
+        menu.style.right = "-200px";
+    }
+
+    document.getElementById("technicalWorkLink").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevents the default behavior of the link
+  
+    alert("Sorry..Technical work still ongoing");
+
+    });
+
+    </script>
+
+    
+</body>
+</html>

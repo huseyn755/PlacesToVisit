@@ -1,0 +1,293 @@
+*{
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(160, 157, 157);
+    padding-top: 62px;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(40, 25, 5);
+    z-index: 1000;
+}
+
+.navbar img{
+    width: 60px;
+}
+
+.navlinks{
+    flex: 1;
+    text-align: right;
+}
+
+.navlinks ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+}
+.navlinks ul li a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,4,4,0.8)
+    ,rgba(4,4,4,0.8)), url(Images/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.textbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.textbox h1{
+    font-size: 7vmin;
+    text-wrap: nowrap;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.searchbar{
+    background-color: transparent;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(215, 213, 213);
+    padding-left: 3%;
+    width: 80%;
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+.about{
+    padding-top: 5%;
+    width: 80%;
+    min-height: 90vh;
+    margin: auto;
+    text-align: center;
+}
+
+.about h1{
+    font-size: 6vmin;
+}
+
+.Explanation{
+    margin-top: 3%;
+}
+.Explanation p{
+    line-height: 200%;
+    font-size: 4vmin;
+}
+
+.btn{
+    background-color: rgba(56, 38, 10, 0.445);
+    width: 12vh;
+    height: 7vh;
+    color: rgba(212, 212, 212, 0.542);
+    border: solid;
+    border-color: rgba(56, 38, 10, 0.445);
+    border-width: 2px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgba(104, 71, 19, 0.751);
+}
+
+.suggestions{
+    padding-top: 5%;
+    min-height: 100vh;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.suggestions h1{
+    font-size: 6vmin;
+}
+
+.callaction{
+    margin-top: 3%;
+}
+
+.callaction p{
+    line-height: 200%;
+    font-size: 4vmin;
+}
+
+.form-container{
+    border:  1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+
+.form input{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: rgb(171, 171, 171);
+}
+
+.form textarea{
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  border: none;
+  background: rgb(171, 171, 171);
+  outline: none;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.share-btn{
+    background-color: rgb(56, 38, 10);
+    width: 12vh;
+    height: 7vh;
+    color: rgba(212, 212, 212, 0.542);
+    border: solid;
+    border-color: rgba(56, 38, 10, 0.445);
+    border-width: 2px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+.share-btn:hover{
+    opacity: 0.9;
+}
+
+/* Files */
+
+.stPlace{
+    width: 95%;
+    min-height: 70vh;
+    margin: auto;
+}
+
+.stRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+.col1{
+    flex-shrink: 0;
+    flex-basis: 35%;
+    padding-top: 50px;
+}
+.col1 img{
+   border-radius: 30px;
+   width: 100%;
+}
+
+
+.col2{
+    flex-grow: 1;
+    margin: 0;
+    padding: 10px 10px;
+    text-align: left;
+    
+}
+
+.col2 h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+    font-size: 4vmin;
+}
+
+.col2 p{
+    line-height: 22px;
+}
+
+.bar{
+    display: none;
+}
+
+iframe{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 300px;
+    height: 100px;
+}
+
+
+
+@media (max-width:700px) {
+    .stRow{
+        flex-direction: column;
+    }
+
+    .bar{
+        display: block;
+    }
+
+    .navlinks ul li{
+        display: block;
+    }
+
+    .navlinks{
+        position: absolute;
+        background-color: lightsalmon;
+        top: 0;
+        right: -200px;
+        width: 150px;
+        height: 150px;
+        text-align: left;
+        transition: 0.5s;
+    }
+
+    .navlinks ul{
+        padding: 20px;
+    }
+   
+    
+
+}
+
+
+@media (max-width:1165px) {
+    .stRow{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
